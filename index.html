@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <title>Saksham's Meeting</title>
+</head>
+<body onload="onload()">
+  <div class="fixed" id="underlay"></div>
+  <div id="contacts-wizard" class="fixed wizard">
+    <br>
+    By Email Address<br>
+    From Phone Contacts
+  </div>
+    <main>
+      <div id="meet-and-chat">
+        <div class="head">
+          <center>
+            <table width="100%" cellspacing="10px">
+              <tr>
+                <td align="left" width="40px"><i class="fa fa-star"></i></td>
+                <td align="center"><b>Meet and Chat</b></td>
+                <td align="right" width="40px"><i class="fa fa-edit"></i></td>
+              </tr>
+            </table>
+            </center>
+            </div>
+            <div>
+            <center>
+            <table width="100%" cellspacing="10px">
+              <tr>
+                <td align="center">
+                  <div class="search-box">
+                    <table width="100%">
+                      <tr>
+                        <td width="40px">
+                          <i class="fa fa-search"></i>
+                        </td>
+                        <td>
+                          <input type="text" placeholder="Search" class="search-bar">
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <div id="tasks">
+          <center>
+          <table width="100%">
+            <tr>
+              <td align="center"><img src="https://dl.dropbox.com/s/wd3cwavfuo7pqv0/new-meet.png"  class="task-img"></td> 
+              <td align="center"><img src="https://dl.dropbox.com/s/fdgbvgu0d10gpga/join.png"  class="task-img"></td> 
+              <td align="center"><img src="https://dl.dropbox.com/s/cwnmr5oib6mb3ix/schedule.png"  class="task-img"></td> 
+              <td align="center"><img src="https://dl.dropbox.com/s/qrb8nkpuf8hdh4t/share.png"  class="task-img"></td> 
+            </tr>
+            <tr style="font-size: 13px;">
+              <td align="center">New Meeting</td>
+              <td align="center">Join</td>
+              <td align="center">Schedule</td>
+              <td align="center">Share</td>
+            </tr>
+          </table>
+          </center>
+        </div>
+        <div id="mid-space">
+          <center>
+             <img src='https://dl.dropbox.com/s/9bziz5g4b6l6han/mid-img.png' height="180px">
+             <br />
+             Find People and Start Chatting
+             <br />
+             <button style="margin-top: 30px;" class="btn-1" onclick="toggleWizard('#contacts-wizard');">Add Contacts</button>
+          </center>
+        </div>
+        <div class="empty-100"></div>
+      </div>
+      <div id="meetings">
+        <div class="head">
+          <center>
+            <table width="100%" cellspacing="10px">
+              <tr>
+                <td align="left" width="40px"></td>
+                <td align="center"><b>Meetings</b></td>
+                <td align="right" width="40px"><i class="fas fa-redo"></i></td>
+              </tr>
+            </table>
+            </center>
+        </div>
+        <div>
+          <div style="margin-top: 10px; font-size: 16px; padding-bottom: 10px; border-bottom: 1px solid rgb(140, 140, 140);">
+            <center>
+              <table cellspacing="10px">
+                <tr><td colspan="3" align="center">Personal Meeting ID</td></tr>
+                <tr>
+                  <td align="center" colspan="3"><h2>5427927010</h2></td>
+                </tr>
+                <tr>
+                  <td align="right"><button class="btn-2">Start</button></td>
+                  <td align="center"><button class="btn-2">Send Invitation</button</td>
+                  <td align="left"><button class="btn-2">Edit</button></td>
+                </tr>
+              </table>
+            </center>
+          </div>
+        </div>
+        <div class="empty-100"></div>
+      </div>
+      <div class="bottom-bar">
+          <table width="100%">
+            <tr>
+              <td class="bottom-tab-1 current-tab"><i class="fa fa-comment-alt"></i></td>
+              <td class="bottom-tab-1"><i class="fa fa-clock"></i></td>
+              <td class="bottom-tab-1"><i class="fa fa-user"></i></td>
+              <td class="bottom-tab-1"><i class="fa fa-cog"></i></td>
+            </tr>
+            <tr>
+              <td class="bottom-tab-1 current-tab" style="font-size: 13px; width: 25%">Meet and Chat</td>
+              <td class="bottom-tab-1" style="font-size: 13px; width: 25%">Meetings</td>
+              <td class="bottom-tab-1" style="font-size: 13px; width: 25%">Contacts</td>
+              <td class="bottom-tab-1" style="font-size: 13px; width: 25%">Settings</td>
+            </tr>
+          </table>
+        </div>
+        <div id="contacts">
+          <div class="head">
+          <center>
+            <table width="100%" cellspacing="0px">
+              <tr>
+                <td align="left" class="bottom-tab-2 current-tab" style="padding: 10px;"><b>Contacts</b></td>
+                <td align="left" class="bottom-tab-2" style="padding: 10px;"><b>Channels</b></td>
+                <td align="right" style="padding: 15px 10px;" width="40px">+</td>
+              </tr>
+            </table>
+            </center>
+            </div>
+            <div>
+            <center>
+            <table width="100%" cellspacing="10px">
+              <tr>
+                <td align="center">
+                  <div class="search-box">
+                    <table width="100%">
+                      <tr>
+                        <td width="40px">
+                          <i class="fa fa-search"></i>
+                        </td>
+                        <td>
+                          <input type="text" placeholder="Search Contacts" class="search-bar">
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <div id="contacts-space">
+          <h2>My Contacts</h2>
+          <table width="100%" style="margin-top: 20px;" cellspacing="0px">
+            <tr>
+              <td align="left" style="padding: 20px 0; border-top: 1px solid rgb(140, 140, 140); border-bottom: 0px solid rgb(140, 140, 140);"><i class="fa fa-angle-down"></i></td>
+              <td style="padding: 20px 0; border-top: 1px solid rgb(140, 140, 140); border-bottom: 0px solid rgb(140, 140, 140);">Starred</td>
+              <td align="right" style="padding: 20px 0; border-top: 1px solid rgb(140, 140, 140); border-bottom: 0px solid rgb(140, 140, 140); font-size: 15px; color: rgb(120, 120, 120);">0</td>
+            </tr>
+            <tr>
+              <td align="left" style="padding: 20px 0; border-top: 1px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);"><i class="fa fa-angle-down"></i></td>
+              <td style="padding: 20px 0; border-top: 1px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">External Contacts</td>
+              <td align="right" style="padding: 20px 0; border-top: 1px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); font-size: 15px; color: rgb(120, 120, 120);">0</td>
+            </tr>
+          </table>
+          <div style="margin-top: 20px;">
+            <table>
+              <tr>
+                <td><div style="display: table-cell; height: 70px; width: 70px; text-align: center; vertical-align: middle; background-color: rgb(14, 114, 236); color: white; font-size: 25px; border-radius: 20px ;"><i class="fa fa-user"></i></div></td>
+                <td style="padding-left: 15px; color: rgb(14, 114, 236);">
+                  Connect Phone Contacts
+                </td>
+              </tr>
+            </table>
+             
+          </div>
+        </div>
+        <div id="channels-space">
+          <center>
+            <div style="display: table-cell; height: 100px; width: 100px; text-align: center; vertical-align: middle; background-color: rgb(230, 230, 230); color: rgb(100, 100, 100); font-size: 25px; border-radius: 30px; border: 1px solid rgb(180, 180, 180);"><i class="fa fa-user"></i></div><br><h4>There are no channels created yet.</h4>
+          </center>
+        </div>
+        </div>
+        <div id="settings">
+          <div class="head">
+          <center>
+            <table width="100%" cellspacing="10px">
+              <tr>
+                <td align="left" width="40px"></td>
+                <td align="center"><b>Settings</b></td>
+                <td align="right" width="40px"><i class="fa fa-edit" style="color: transparent; background-color: transparent;"></i></td>
+              </tr>
+            </table>
+            </center>
+            </div>
+            <div class="table-grp">
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 1px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">Meeting</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 1px solid rgb(140,140,140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);">
+                    <i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">General</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);">
+                    <i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="table-grp">
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 1px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">Version</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 1px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);">
+                    <i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">Send Feedback</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);">
+                    0.5 &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">Tell Others About Saksham's Meeting</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);">
+                    <i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">Rate  in Google Play Store</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);">
+                    <i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);">Privacy Policy</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);">
+                    <i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140);" onclick="toggleMode()" id='modeBtn'>Dark Mode</td>
+                  <td align="right" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 0px solid rgb(140, 140, 140); border-bottom: 1px solid rgb(140, 140, 140); color: rgb(180, 180, 180);" onclick="toggleMode()">
+                    <i class="fa fa-angle-right"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="text-align: center; font-size: 15px; color: rgb(120, 120, 120);">Copyrights &copy;  Saksham Bhambota UI</div>
+        </div>
+    </main>
+    <div id='toast'>Find Dark Mode and Click it</div>
+    <div id='loader'>Saksham's Meeting</div>
+</body>
+</html>
